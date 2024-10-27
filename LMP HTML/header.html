@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Motor Parts</title>
+    <style>
+        /* Define custom font */
+        @font-face {
+            font-family: 'BrightnessInverted';
+            src: url('fonts/BrightnessInverted.ttf') format('truetype');
+        }
+
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        /* Centered Header styling */
+        header {
+            background-color: #2a2a2a;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'BrightnessInverted', sans-serif;
+            font-size: 4em;
+            font-weight: 500;
+            color: #1E90FF;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #1E90FF;
+        }
+
+        /* Hero section */
+        .hero {
+            position: relative;
+            text-align: center;
+            background: url('achtergrondcarbon.jpg') no-repeat center center/cover;
+            height: 70vh;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ffffff;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.5em, 2.5vw, 2.5em);
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            background-color: #1E90FF;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0d74cc;
+        }
+
+        /* Product section */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .product-card {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            color: #1E90FF;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 0.9em;
+            color: #cfcfcf;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Centered Logo -->
+    <header>
+        <h1>LMP</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Carbon Infuse Technology</h2>
+            <p>Wij streven met al onze producten naar uitstekende kwaliteit en bruikbaarheid</p>
+            <button class="btn-primary" onclick="window.location.href='#shop'">View Products</button>
+        </div>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="shop" class="product-list">
+        <div class="product-card">
+            <img src="product1.jpg" alt="Iphone houder normaal | Piaggio zip & Vespa">
+            <h3>Iphone houder normaal | Piaggio zip & Vespa</h3>
+            <p>€79.99</p>
+            <button class="btn-primary" onclick="window.location.href='product1.html'">View Details</button>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Iphone houder Carbon reinforced | Piaggio zip & Vespa">
+            <h3>Iphone houder Carbon reinforced | Piaggio zip & Vespa</h3>
+            <p>€94.99</p>
+            <button class="btn-primary" onclick="window.location.href='product2.html'">View Details</button>
+        </div>
+        <!-- Add more product cards as needed -->
+    </section>
+
+</body>
+</html>
